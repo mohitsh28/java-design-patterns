@@ -1,0 +1,27 @@
+package com.pocdecorator;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+public class ClubbedTroll implements Troll {
+
+    private final Troll decorated;
+
+    @Override
+    public void attack() {
+        decorated.attack();
+        System.out.println("Troll Swings with club");
+    }
+
+    @Override
+    public int getAttackPower() {
+        return decorated.getAttackPower() + 30;
+    }
+
+    @Override
+    public void fleeBattle() {
+        decorated.fleeBattle();
+    }
+
+
+}
