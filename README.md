@@ -10,5 +10,17 @@ object. A builder that receives each initialization parameter step by step and r
 
 3. Singleton: Singleton Patterns ensure that the class can have only one existing instance per Java classLoader instance
    and provides global access to it. Risky is setting up in Distributed environment and can be tricky to debug the same.
-   A single ClassLoader is easy to work with.   
+   A single ClassLoader is easy to work with.
 
+Structural Patterns:
+
+1. Decorator: The Decorator pattern is a more flexible alternative to subclassing. The Decorator class implements the
+   same interface as the target and uses composition to "decorate" calls to the target. Using the Decorator pattern it
+   is possible to change the behavior of the class during runtime.
+   
+Behavioural Patterns:
+
+1. Strategy: The LambdaStrategy pattern (also known as the policy pattern) is a software design pattern that enables an
+   algorithm's behavior to be selected at runtime. Before Java 8 the Strategies needed to be separate classes forcing
+   the developer to write lots of boilerplate code. With modern Java it is easy to pass behavior with method references
+   and lambdas making the code shorter and more readable.
